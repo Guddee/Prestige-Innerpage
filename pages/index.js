@@ -9,7 +9,7 @@ export async  function getStaticProps()
    space:"fo2bfrw08w1u",
     accessToken:"IhKu8CAgf6PpJbjkXkllPKIPbKDAJzJL4FzYJZlWO0w",
   })
-  const res=await client.getEntries({content_type:'prestigeSongOfSouthBangalore'})
+  const res=await client.getEntries({content_type:'prestigeLakeRidge'})
   return {
     props:{
       articles:res.items
@@ -18,7 +18,6 @@ export async  function getStaticProps()
 }
 
 export default function Home({articles}) {
-  console.log(articles)
   return (
     <div>
       {articles.map((article,index)=>

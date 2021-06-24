@@ -7877,7 +7877,7 @@ nav.smenu.show {
     justify-content: flex-start;
     align-items: center;
     padding: 0px 2px 0px 0px;
-    flex: 0 1 calc(25% - 10px);
+    flex:0 1 calc(29% - 1px);
     margin: 5px;
     text-align: left;
 }
@@ -9463,10 +9463,12 @@ button:focus {
   {
     display:none;
   }
-  .bg-profile .banner_imgs img 
+  .bg-profile .banner_imgs img
   {
     width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
   }
   }
   .list-inline .list-inline-item
@@ -9646,4 +9648,138 @@ table.rwd-table th:last-child {
 .MuiIconButton-edgeStart
 {
   display: none;
+}
+.MuiSvgIcon-root {
+  display: none!important;
+}
+@media (max-width: 767px) {
+  .MuiSvgIcon-root {
+    display: block!important;
+  }
+}
+a .MuiSvgIcon-root {
+  display: block!important;
+}
+img.thankyou
+{
+width: 250px;
+}
+.thankyou
+{
+display: table;
+margin: 0px auto;}
+.Field 
+{
+  width: 100%;
+  display: table;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.middle_part
+{
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 10px auto;
+        letter-spacing: 8px;
+        color: #00182e;
+        display: table;
+      }
+
+.Field button {
+  padding: 10px 20px;
+  text-align: center;
+  display: table;
+  text-decoration: none;
+  background-color: #db8400;
+  margin: 0 auto;
+  border: none;
+  font-size: 22px;
+  font-weight: 700;
+}
+i.fas.fa-check {
+  text-align: center;
+  width: 100%;
+  font-size: 80px;
+  color: #458700;
+}
+ h1.thank-head {
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  display: table;
+  margin: 10px auto;
+  letter-spacing: 11px;
+  color: #00182e;
+}
+.iconSocial a
+{
+  font-size: 30px;
+    text-align: center;
+    background: rgb(237 237 237 / 33%);
+    padding: 10px 21px;
+    box-sizing: border-box;
+    width: 65px;
+    border-radius: 10px;
+    color: #151e2d !important;
+    margin-top: 15px;
+}
+.iconSocial img
+{
+width: 130px;
+}
+.SocialButton li a img {
+  display: table;
+  margin: -5px auto 0
+}
+.SocialButton {
+  position: fixed;
+  bottom: 0px;
+  width: 80px;
+  z-index: 1001;
+  left: -35px;
+  display: none
+}
+
+  .SocialButton li {
+      width: 45px;
+      float: left;
+      background: #4285f4;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      padding: 3px;
+      font-size: 28px;
+      box-shadow: 2px 3px 18px #000;
+      color: #fff;
+      height: 45px;
+      display: block;
+      text-align: center
+  }
+
+      .SocialButton li a {
+          width: 100%;
+          float: left;
+          color: #fff;
+          margin-top: 5px;
+          padding: 0;
+      }
+      .SocialButton li a.phone_url1
+      {
+          background-color: #4285f4;
+          border-radius: 60px;
+      }
+
+      .SocialButton li:last-child {
+          margin-left: 0;
+          background-color: #34af23
+      }
+
+@media(max-width:767px) {
+  .SocialButton {
+      display: block
+  }
+  .pi-section table {
+    width: 100%;
+  }
 }

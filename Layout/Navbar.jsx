@@ -39,38 +39,38 @@ const useStyles = makeStyles((theme) => ({
 
               <ul className="navigation-menu mobBlock">
                 <li>
-                  <a href="/#">
+                  <a href="#Highlights">
                     <span>Project Highlights</span>
                   </a>
                 </li>
               
                 <li>
-                  <a href="/#">
+                  <a href="#Overview">
                     <span>About</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/#">
+                  <a href="#Amenities">
                     <span>Amenities</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/#">
+                  <a href="#FloorPlan">
                     <span>FloorPlan</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/#">
+                  <a href="#PricePlan">
                     <span>Price Plan</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/#">
+                  <a href="#Gallery">
                     <span>Gallery</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/#">
+                  <a href="#Location">
                     <span>Location</span>
                   </a>
                 </li>
@@ -108,23 +108,43 @@ const useStyles = makeStyles((theme) => ({
               <div>
                 <div className="demo-list">
                   <ul>
-                    <li>
-                      <a href="/#">About Us </a>
-                    </li>
-                    <li>
-                      <a href="contact-us.html">Contact us </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span>Luxury Homes</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span>Ready Homes</span>
-                      </a>
-                    </li>
-                    <li>
+                  <li>
+                  <a href="#Highlights">
+                    <span>Project Highlights</span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#Overview">
+                    <span>About</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#Amenities">
+                    <span>Amenities</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#FloorPlan">
+                    <span>FloorPlan</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#PricePlan">
+                    <span>Price Plan</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#Gallery">
+                    <span>Gallery</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#Location">
+                    <span>Location</span>
+                  </a>
+                </li>
+               <li>
                       <a className="phone_url" href="07411782406">
                         <span className="phone_no">07411782406</span>
                       </a>

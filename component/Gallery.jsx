@@ -1,47 +1,27 @@
 import React from 'react'
 
-export default function Gallery() {
+export default function Gallery({article}) {
+   const {galleryImages}=article.fields;
     return (
         <div>
-                <div class="pi-section" id="Gallery">
+                <div className="pi-section" id="Gallery">
                         <h4>Project Gallery</h4>
-                        <div class="gallery-item-filter">
-                            <span class="tab active" data-category=".item">All</span>
-                            <span class="tab" data-category=".master">External View</span>
-                            <span class="tab" data-category=".1">Garden View </span>
-                            <span class="tab" data-category=".2">Internal View</span>
+                        <div className="gallery-item-filter">
+                            <span className="tab active" data-category=".item">All</span>
+                            <span className="tab" data-category="#External">External View</span>
+                            <span className="tab" data-category="#Internal">Internal View</span>
                         </div>
-                        <div class="row gallery-items gallery-masonry">
-                            <div class="col-md-4 item master">
-                                <a href="assest/img/gallery/1.jpg">
-                                    <img src="assest/img/gallery/1.jpg" alt="Gallery_Image" />
+                        <div className="row gallery-items gallery-masonry">
+                        {
+                            galleryImages.map((item,i)=>(
+                                <div className="col-md-4 item" id={galleryImages[i].fields.title} key={i}>
+                                <a href={galleryImages[i].fields.file.url}>
+                                    <img src={galleryImages[i].fields.file.url} alt="Gallery_Image" />
                                 </a>
                             </div>
-                            <div class="col-md-4 item 1">
-                            <a href="assest/img/gallery/2.jpg">
-                                    <img src="assest/img/gallery/2.jpg" alt="Gallery_Image" />
-                                </a>
-                            </div>
-                            <div class="col-md-4 item 2">
-                            <a href="assest/img/gallery/3.jpg">
-                                    <img src="assest/img/gallery/3.jpg" alt="Gallery_Image" />
-                                </a>
-                            </div>
-                            <div class="col-md-4 item master">
-                                <a href="assest/img/gallery/1.jpg">
-                                    <img src="assest/img/gallery/1.jpg" alt="Gallery_Image" />
-                                </a>
-                            </div>
-                            <div class="col-md-4 item 1">
-                            <a href="assest/img/gallery/2.jpg">
-                                    <img src="assest/img/gallery/2.jpg" alt="Gallery_Image" />
-                                </a>
-                            </div>
-                            <div class="col-md-4 item 2">
-                            <a href="assest/img/gallery/3.jpg">
-                                    <img src="assest/img/gallery/3.jpg" alt="Gallery_Image" />
-                                </a>
-                            </div>
+                            ))
+
+                        }
                         </div>
                     </div>
     

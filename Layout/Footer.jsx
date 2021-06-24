@@ -23,7 +23,7 @@ export const Footer = () => {
         <div>
      <footer id="footertop" className="footer">
         <div className="container-section">
-          {/* <div className="SocialButton" id="SocailSection">
+          <div className="SocialButton" id="SocailSection">
             <ul>
               <li>
                 <a
@@ -39,7 +39,7 @@ export const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div> */}
+          </div>
           <div className="row align-items-top">
             <div className="col-lg-4 col-12 mt-sm-0 pt-2 pt-sm-0">
               <div className="title-heading">

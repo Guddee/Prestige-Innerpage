@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 export default function Banner({article}) {
-  const {banner,projectLogo,projectName,projectLocation}=article.fields;
+  const {banner,projectLogo,projectName,projectLocation,priceButton,locationLink}=article.fields;
   return (
     <div>
       <section className="bg-profile w-100">
@@ -46,8 +46,7 @@ export default function Banner({article}) {
                            {projectLocation}
                           </span>
                           <a
-                            href="https://www.google.com/maps/place/Prestige+Courtyards/@12.8896438,80.2168904,17z/data=!3m1!4b1!4m5!3m4!1s0x3a525bcd162e0feb:0x3367b736a2cdcc04!8m2!3d12.8896438!4d80.2190791"
-                            target="_new"
+                            href={locationLink} target="_new"
                             className="Banner_below_Text"
                           >
                             <span>
@@ -63,7 +62,7 @@ export default function Banner({article}) {
                         <ul className="list-inline mb-0 mt-2">
                           <li className="list-inline-item mr-2">
                             <a
-                              href="javascript:void(0)"
+                              href="/#"
                               style={{ pointerEvents: "none" }}
                             >
                               <div
@@ -71,8 +70,7 @@ export default function Banner({article}) {
                                 role="alert"
                               >
                                 <span className="alert-content">
-                                  {" "}
-                                  38* Lakhs onwards{" "}
+                                {priceButton}  
                                 </span>
                               </div>
                             </a>
@@ -81,45 +79,10 @@ export default function Banner({article}) {
                       </div>
                       <div className="col-md-8 text-md-right text-center p-0">
                         <ul className="list-inline mb-0 mt-2">
-                          <li className="list-inline-item watch-video">
-                            <a
-                              href="https://www.youtube.com/watch?v=vygSkW3kkBs"
-                              target="_new"
-                              className="video-play-icon watch text-dark mb-2"
-                            >
-                              <div
-                                className="alert alert-dark alert-pills alert-btn"
-                                role="alert"
-                              >
-                                <i className="uil uil-play-circle"></i>{" "}
-                                <span className="alert-content">
-                                  Walkthrough Video
-                                </span>
-                              </div>
-                            </a>
-                          </li>
-
-                          <li className="list-inline-item watch-video watch-vt">
-                            <a
-                              href="https://www.watchitvirtually.com/wp-content/uploads/VirtualTours/Prestige_Courtyard_iBrochure/index.htm"
-                              target="_new"
-                              className="video-play-icon watch text-dark mb-2"
-                            >
-                              <div
-                                className="alert alert-dark alert-pills alert-btn"
-                                role="alert"
-                              >
-                                <i className="uil uil-rotate-360"></i>{" "}
-                                <span className="alert-content">
-                                  Virtual Tour
-                                </span>
-                              </div>
-                            </a>
-                          </li>
 
                           <li className="list-inline-item watch-video vt-brochure">
                             <a
-                              href="javascript:void(0)"
+                              href="/#"
                               style={{ color: " #fff;" }}
                               className="text-dark mb-2"
                               data-keyboard="false"
@@ -132,7 +95,7 @@ export default function Banner({article}) {
                                 role="alert"
                               >
                                 <i className="uil-file-download"></i>{" "}
-                                <span className="alert-content">Brochure</span>
+                                <span className="alert-content">Download Brochure</span>
                               </div>
                             </a>
                           </li>
