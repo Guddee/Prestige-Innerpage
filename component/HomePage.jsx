@@ -31,7 +31,7 @@ export default function HomePage({ article }) {
               <DownloadBrochure article={article} />
               <Location article={article} />
             </div>
-            <ModalForm />
+            <ModalForm  article={article} />
             <div
               className="col-lg-4 col-md-5 col-12 d-md-block psection-left"
               id="enform"

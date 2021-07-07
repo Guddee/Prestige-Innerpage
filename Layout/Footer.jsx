@@ -1,41 +1,42 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import PhoneIcon from "@material-ui/icons/Phone";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
-import { getApi } from '../config/CustomApi';
-import { STATIC_PHONE } from '../config/ServerKey';
-
+import { STATIC_PHONE } from "../config/ServerKey";
+import { getApi } from "../pages";
 
 export const Footer = () => {
- 
-    const [data, setData] = useState(null);
-    useEffect(() => {
-      getApi().then((data) => {
-        setData(data);
-      });
-    }, []);
-    const phone_no=data?.phone ;
-    const whatsapp_no=data?.wp_links;
-    return (
-        <div>
-     <footer id="footertop" className="footer">
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    getApi().then((data) => {
+      setData(data);
+    });
+  }, []);
+  const phone_no = data?.phone;
+  const whatsapp_no = data?.wp_links;
+  return (
+    <div>
+      <footer id="footertop" className="footer">
         <div className="container-section">
           <div className="SocialButton" id="SocailSection">
             <ul>
               <li>
                 <a
                   className={phone_no || STATIC_PHONE}
-                  href={"tel:"+`${phone_no}`}
+                  href={"tel:" + `${phone_no}`}
                 >
-                  <img src="assest/img/phone.png" alt="phoneImg"/>
+                  <img src="assest/img/phone.png" alt="phoneImg" />
                 </a>
               </li>
               <li>
-                <a className="whatsap_url" href={`${whatsapp_no}`+"!I want to know about Project_name"}>
-                  <img src="assest/img/whatsapp.png" alt="whatsappImg"/>
+                <a
+                  className="whatsap_url"
+                  href={`${whatsapp_no}` + "!I want to know about Project_name"}
+                >
+                  <img src="assest/img/whatsapp.png" alt="whatsappImg" />
                 </a>
               </li>
             </ul>
@@ -122,8 +123,7 @@ export const Footer = () => {
                     className="text-foot"
                     target="_new"
                   >
-                    <i className="mdi mdi-chevron-right mr-1"></i> Prestige song
-                    of the south
+                    Prestige song of the south
                   </a>
                 </li>
                 <li>
@@ -132,8 +132,7 @@ export const Footer = () => {
                     className="text-foot"
                     target="_new"
                   >
-                    <i className="mdi mdi-chevron-right mr-1"></i> Prestige
-                    Royale Gardens
+                    Prestige Royale Gardens
                   </a>
                 </li>
                 <li>
@@ -142,8 +141,7 @@ export const Footer = () => {
                     className="text-foot"
                     target="_new"
                   >
-                    <i className="mdi mdi-chevron-right mr-1"></i> Prestige
-                    Augusta Golf Village
+                    Prestige Augusta Golf Village
                   </a>
                 </li>
                 <li>
@@ -152,8 +150,7 @@ export const Footer = () => {
                     className="text-foot"
                     target="_new"
                   >
-                    <i className="mdi mdi-chevron-right mr-1"></i> Prestige Lake
-                    Ridge
+                    Prestige Lake Ridge
                   </a>
                 </li>
               </ul>
@@ -167,8 +164,7 @@ export const Footer = () => {
                     className="text-foot"
                     target="_new"
                   >
-                    <i className="mdi mdi-chevron-right mr-1"></i> Prestige
-                    Finsburry
+                    Prestige Finsburry
                   </a>
                 </li>
                 <li>
@@ -177,8 +173,7 @@ export const Footer = () => {
                     className="text-foot"
                     target="_new"
                   >
-                    <i className="mdi mdi-chevron-right mr-1"></i> Prestige
-                    Jindal City
+                    Prestige Jindal City
                   </a>
                 </li>
               </ul>
@@ -192,7 +187,7 @@ export const Footer = () => {
                     className="text-foot"
                     target="_new"
                   >
-                    <i className="mdi mdi-chevron-right mr-1"></i> About us
+                    About us
                   </a>
                 </li>
                 <li>
@@ -201,7 +196,7 @@ export const Footer = () => {
                     className="text-foot"
                     target="_new"
                   >
-                    <i className="mdi mdi-chevron-right mr-1"></i> About Rera
+                    About Rera
                   </a>
                 </li>
                 <li>
@@ -210,8 +205,7 @@ export const Footer = () => {
                     className="text-foot"
                     target="_new"
                   >
-                    <i className="mdi mdi-chevron-right mr-1"></i> Privacy
-                    Policy
+                    Privacy Policy
                   </a>
                 </li>
                 <li>
@@ -220,8 +214,7 @@ export const Footer = () => {
                     className="text-foot"
                     target="_new"
                   >
-                    <i className="mdi mdi-chevron-right mr-1"></i> Terms &
-                    Conditions
+                    Terms & Conditions
                   </a>
                 </li>
               </ul>
@@ -252,6 +245,6 @@ export const Footer = () => {
           </div>
         </div>
       </footer>
-        </div>
-    )
-}
+    </div>
+  );
+};

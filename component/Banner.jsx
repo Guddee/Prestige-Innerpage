@@ -1,8 +1,17 @@
-import React from "react";
+import React, {useState,useEffect}  from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { getApi } from "../pages";
 
 export default function Banner({article}) {
   const {banner,projectLogo,projectName,projectLocation,priceButton,locationLink}=article.fields;
+
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    getApi().then((data) => {
+      setData(data);
+    });
+  }, []);
+  const phone_no = data?.phone;
   return (
     <div>
       <section className="bg-profile w-100">
@@ -102,7 +111,7 @@ export default function Banner({article}) {
 
                           <li className="list-inline-item">
                             <a
-                              href="tel:+91 44 4000 4800"
+                              href={"tel:" + `${phone_no}`}
                               className="btn-call"
                               id="contactno"
                             >
@@ -112,7 +121,7 @@ export default function Banner({article}) {
                               >
                                 <i className="uil uil-phone"></i>{" "}
                                 <span className="alert-content">
-                                  +91 44 4000 4800
+                                  {phone_no}
                                 </span>
                               </div>
                             </a>

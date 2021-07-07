@@ -1,19 +1,12 @@
-import { getApi } from "./CustomApi";
+import { getApi } from "../pages";
 import { browserData, deviceData, getIpAddress, queryForm } from "./Helper";
 
 var projectId;
-var RegNo;
-var city;
-
-let getData=getApi().then((data) => {
-    projectId = data.Project.p_id;
-    city = data.Project.Region.city;
-    RegNo = data.Project.Region.region_name;
-})
-
-
  const saveLead=async(data)=>
 {
+    getApi().then((data) => {
+        projectId = data.Project.p_id;
+    })
     debugger;
    const user_device=deviceData();
    const user_browser=browserData();

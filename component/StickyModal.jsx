@@ -3,7 +3,7 @@ import { FORM_ICON } from '../config/ServerKey';
 import { CountryCode } from "./CountryCode";
 import { useRouter } from 'next/router';
 import { saveLead } from '../config/Sendobject';
-import { postApi } from '../config/CustomApi';
+import { postApi } from '../pages/api/CustomApi';
 
 export default function StickyModal() {
   let initialData=
